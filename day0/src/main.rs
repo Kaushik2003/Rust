@@ -1,13 +1,11 @@
-
-
 //* Basic Variables and integer types */
-/* 
+/*
 
 fn main() {
     println!("Hello, world!");
     let x: i8 =22;                          // -128 to 127;
     let _y: i16 = 1233;     integer         //-32768-32767
-    let _z: i32 = 123;      
+    let _z: i32 = 123;
     let _a: i64 = 123;
     let _b: i128 = 123;
 
@@ -26,8 +24,7 @@ fn main() {
 }
 */
 
-
-/* 
+/*
 fn main() {
     let mut x: i8= 100;
 
@@ -54,8 +51,4 @@ fn main() {
 
 */
 
-fn main() {
-
-    
-    
-}
+fn main() {}
