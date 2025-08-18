@@ -1,11 +1,25 @@
+
+
 fn main() {
-    let s1 = String::from("hello");
+    let mut s = String::from("hello world");
 
-    let len = calculate_length(&s1);
+    let word = first_word(&s); // word will get the value 5
 
-    println!("The length of '{s1}' is {len}.");
+    s.clear(); // this empties the String, making it equal to ""
+
+    // `word` still has the value `5` here, but `s` no longer has any content
+    // that we could meaningfully use with the value `5`, so `word` is now
+    // totally invalid!
 }
 
-fn calculate_length(s: &String) -> usize {
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
     s.len()
 }
