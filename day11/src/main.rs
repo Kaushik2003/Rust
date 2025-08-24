@@ -14,7 +14,12 @@ enum Coin{
 fn main() {
 let coin=Coin::Quarter(IndState::WestBengal);
 println!("Value is {}",value_in_cent(coin));
+println!("Add result = {}",add(50, Some(50)));
+println!("Add result = {}",add(50, None));
 
+let config_max=Some(3_u8);
+if let Some(max)=config_max{
+      
 }
 
 fn value_in_cent(coin:Coin)->u8{
@@ -33,3 +38,11 @@ fn value_in_cent(coin:Coin)->u8{
         
     }
 }
+
+fn add(num:i32,num2:Option<i32>)->i32 {
+    match num2 {
+        Some(i)=> num+i,
+        None=>num,
+    }
+}
+
